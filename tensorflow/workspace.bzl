@@ -737,12 +737,12 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
 
     tf_http_archive(
         name = "boringssl",
-        sha256 = "a9c3b03657d507975a32732f04563132b4553c20747cec6dc04de475c8bdf29f",
-        strip_prefix = "boringssl-80ca9f9f6ece29ab132cce4cf807a9465a18cfac",
+        sha256 = "b0ff5e11eff6f4afd6f7645f225a1f9a4096820f9541f43ab56b60a33af01c79",
+        strip_prefix = "boringssl-0ed82881f1850706df9e66202dcc90dd7dacba17",
         system_build_file = clean_dep("//third_party/systemlibs:boringssl.BUILD"),
         urls = [
-            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/google/boringssl/archive/80ca9f9f6ece29ab132cce4cf807a9465a18cfac.tar.gz",
-            "https://github.com/google/boringssl/archive/80ca9f9f6ece29ab132cce4cf807a9465a18cfac.tar.gz",
+            #"https://storage.googleapis.com/mirror.tensorflow.org/github.com/google/boringssl/archive/80ca9f9f6ece29ab132cce4cf807a9465a18cfac.tar.gz",
+            "https://github.com/loongson/boringssl/archive/0ed82881f1850706df9e66202dcc90dd7dacba17.tar.gz",
         ],
     )
 
@@ -913,12 +913,12 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
     tf_http_archive(
         name = "double_conversion",
         build_file = clean_dep("//third_party:double_conversion.BUILD"),
-        sha256 = "2f7fbffac0d98d201ad0586f686034371a6d152ca67508ab611adc2386ad30de",
-        strip_prefix = "double-conversion-3992066a95b823efc8ccc1baf82a1cfc73f6e9b8",
+        sha256 = "75bc98fde25bb7430548708f29e7321a1b375221955dea93d2f29ac35299079e",
+        strip_prefix = "double-conversion-2b188d6be061794249bf49807c6d7546744a7b5e",
         system_build_file = clean_dep("//third_party/systemlibs:double_conversion.BUILD"),
         urls = [
-            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/google/double-conversion/archive/3992066a95b823efc8ccc1baf82a1cfc73f6e9b8.zip",
-            "https://github.com/google/double-conversion/archive/3992066a95b823efc8ccc1baf82a1cfc73f6e9b8.zip",
+            #"https://storage.googleapis.com/mirror.tensorflow.org/github.com/google/double-conversion/archive/3992066a95b823efc8ccc1baf82a1cfc73f6e9b8.zip",
+            "https://github.com/loongson/double-conversion/archive/2b188d6be061794249bf49807c6d7546744a7b5e.zip",
         ],
     )
 

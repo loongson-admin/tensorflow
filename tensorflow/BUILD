@@ -216,6 +216,12 @@ config_setting(
 )
 
 config_setting(
+    name = "linux_loongarch64",
+    values = {"cpu": "loongarch64"},
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
     name = "linux_armhf",
     values = {"cpu": "armhf"},
     visibility = ["//visibility:public"],

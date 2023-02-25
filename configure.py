@@ -88,6 +88,10 @@ def is_ppc64le():
   return platform.machine() == 'ppc64le'
 
 
+def is_loongarch64():
+  return platform.machine() == 'loongarch64'
+
+
 def is_cygwin():
   return platform.system().startswith('CYGWIN_NT')
 
@@ -523,6 +527,8 @@ def set_cc_opt_flags(environ_cp):
   if is_ppc64le():
     # gcc on ppc64le does not support -march, use mcpu instead
     default_cc_opt_flags = '-mcpu=native'
+  if is_loongarch64():
+    default_cc_opt_flags = '-march=loongarch64 -mcmodel=large -Wno-sign-compare'
   elif is_windows():
     default_cc_opt_flags = '/arch:AVX'
   else:
@@ -537,6 +543,8 @@ def set_cc_opt_flags(environ_cp):
   # It should be safe on the same build host.
   if not is_ppc64le() and not is_windows():
     write_to_bazelrc('build:opt --host_copt=-march=native')
+  if is_loongarch64():
+    write_to_bazelrc('build:opt --host_copt=-march=loongarch64 --host_copt=-mcmodel=large')
   write_to_bazelrc('build:opt --define with_default_optimizations=true')
 
 
