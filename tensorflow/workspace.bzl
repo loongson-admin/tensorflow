@@ -171,12 +171,16 @@ def tf_repositories(path_prefix = "", tf_repo_name = ""):
 
     tf_http_archive(
         name = "mkl_dnn_v1",
-        build_file = clean_dep("//third_party/mkl_dnn:mkldnn_v1.BUILD"),
-        sha256 = "5369f7b2f0b52b40890da50c0632c3a5d1082d98325d0f2bff125d19d0dcaa1d",
-        strip_prefix = "oneDNN-1.6.4",
+        #build_file = clean_dep("//third_party/mkl_dnn:mkldnn_v1.BUILD"),
+        #sha256 = "5369f7b2f0b52b40890da50c0632c3a5d1082d98325d0f2bff125d19d0dcaa1d",
+        #strip_prefix = "oneDNN-1.6.4",
+        build_file = clean_dep("//third_party/mkl_dnn:mkldnn_v2.BUILD"),
+        sha256 = "05e0274382aa96c7b4379fedd5c66f8d9a289b3a6c252da626ea797bf869c76a",
+        strip_prefix = "oneDNN-2.3.2-la-tag1.0",
         urls = [
-            "https://storage.googleapis.com/mirror.tensorflow.org/github.com/oneapi-src/oneDNN/archive/v1.6.4.tar.gz",
-            "https://github.com/oneapi-src/oneDNN/archive/v1.6.4.tar.gz",
+            #"https://storage.googleapis.com/mirror.tensorflow.org/github.com/oneapi-src/oneDNN/archive/v1.6.4.tar.gz",
+            #"https://github.com/oneapi-src/oneDNN/archive/v1.6.4.tar.gz",
+            "https://github.com/loongson/oneDNN/archive/v2.3.2-la-tag1.0.tar.gz",
         ],
     )
 
